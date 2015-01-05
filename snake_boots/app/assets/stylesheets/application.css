@@ -1,0 +1,165 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*
+Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic|
+Ubuntu+Mono:400,700,400italic,700italic|
+Ubuntu+Condensed|
+
+Droid+Sans+Mono|
+Droid+Sans:400,700|
+Droid+Serif:400,700,400italic,700italic|
+
+Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|
+
+Source+Code+Pro:200,300,400,500,600,700,900|
+
+Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|
+Open+Sans+Condensed:300,300italic,700|
+
+Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|
+Roboto+Condensed:300italic,400italic,700italic,400,300,700|
+
+Slabo+27px|
+Raleway:400,100,200,300,500,600,700,800,900|
+Inconsolata:400,700
+
+font-family: 'Ubuntu Mono', ;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Ubuntu Condensed', sans-serif;
+font-family: 'Droid Sans', sans-serif;
+font-family: 'Droid Sans Mono', ;
+font-family: 'Lato', sans-serif;
+font-family: 'Source Code Pro', ;
+font-family: 'Droid Serif', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Slabo 27px', serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Inconsolata', ;
+*/
+
+/* -------------------------------------------------------------- 
+  
+   Reset default browser CSS.
+   
+   Based on work by Eric Meyer:
+   http://meyerweb.com/eric/tools/css/reset/index.html
+   
+-------------------------------------------------------------- */
+
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+    background:#fff;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a img { border: none; }
+
+/* -------------------------------------------------------------- 
+   END RESET
+-------------------------------------------------------------- */
+
+
+@import url(http://fonts.googleapis.com/css?family=
+	Raleway:400,100,200,300,500,600,700,800,900|
+	Ubuntu+Mono:400,700,400italic,700italic
+);
+
+
+* {
+	font-family: 'Raleway', sans-serif !important;
+}
+
+#notice {
+	position: fixed;
+	top: 0;
+}
+
+.row {
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-direction: row;
+	flex-direction: row;
+}
+
+.col {
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-direction:	column;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+	font-style: normal;
+	color: inherit;
+}
+
+.date {
+}

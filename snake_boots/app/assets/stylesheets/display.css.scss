@@ -1,0 +1,226 @@
+$min_font: 1.3em;
+$primary-color: rgba(100, 0, 0, 0.2);
+$secondary-color: rgba(0, 0, 0, 0.5);
+
+$thumbnail_size: 10em;
+
+
+.display.entries {
+	font-size: $min_font;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.display .entry {
+	position: relative;
+	font-size: 1em;
+	max-height: $thumbnail_size;
+	margin-left: auto;
+	border-bottom: 1px solid rgba(100, 0, 0, 0.2);
+	max-width: 85vw;
+	padding-bottom: .3em;
+}
+
+@media (max-width: 1100px) { 
+	.display .entry {
+		font-size: .9em;
+	}
+}
+
+@media (max-width: 750px) { 
+	.display .entry {
+		font-size: .8em;
+	}
+}
+
+@media (max-width: 650px) { 
+	.display .entry {
+		font-size: .7em;
+	}
+}
+
+@media (max-width: 550px) { 
+	.display .entry {
+		font-size: .7em;
+	}
+}
+
+.display .entry-link {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+
+
+.display .entry-link:hover {
+	background-color: initial;
+}
+
+.display .entry .col.entry-contents { /*without a specified second-axis-dimension, flex-child will fill */
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+	text-align: right;
+	margin: 0 1em;
+	overflow-y: hidden;
+}
+
+@media (max-width: 500px) { 
+	.display .entry .col.entry-contents {
+		overflow: visible; /*stupid fix for flex overflow bug*/
+	}
+}
+
+.display .entry-content {
+	line-height: 1em;
+}
+
+.display .entry-content.title {
+	font-size: 3em;
+	color: rgba(100, 0, 0, 0.8);
+	transition: color .3s ease;
+	white-space: nowrap;
+}
+
+.display .entry-content.title:before {
+	display: inline-block;
+	content: ">>";
+	transition: transform .5s ease;
+}
+
+/*.display .entry .tags {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	display: inline-block;
+	font-size: .8em;
+	font-size: 6em;
+	line-height: 1;
+	z-index: -1;
+	white-space: nowrap;
+}*/
+
+.display .entry .tags {
+	position: absolute;
+	bottom: -1em;
+	left: 0;
+	font-size: .8em;
+	line-height: 1;
+}
+
+@media (max-width: 750px) { 
+	.display .entry .tags {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 650px) { 
+	.display .entry .tags {
+		font-size: 1.5rem;
+	}
+}
+
+
+.display .entry .tag {
+	color: rgba(100, 0, 0, 0.2);
+	transition: color .5s ease;
+}
+
+.display .entry .tag:before {
+	content: "#";
+	color: rgba(0, 0, 0, 0.1);
+}
+
+.display .entry .tag:hover {
+	background: none;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.display .entry-content.intro {
+	display: inline-block;
+	font-size: 1.1em;
+	font-weight: 100;
+	line-height: 1.1;
+	color: rgba(0, 0, 0, 0.6);
+	transition: color .3s ease;
+}
+
+@media (max-width: 500px) { 
+	.display .entry-content.intro {
+		display: none;
+	}
+}
+
+.display .entry:hover .entry-content.intro {
+	/*color: rgba(100, 0, 0, 0.8);*/
+	color: rgba(0, 0, 0, 0.8);
+}
+
+
+.display .entry-content.title {
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+}
+
+.display .entry:hover .entry-content.title {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.display .entry:hover .entry-content.title:before {
+	transform: translate(-.5em, 0);
+}
+
+
+/*.display .entry-content.intro:after {
+	display: inline-block;
+	content: ">>";
+	font-size: 1em;
+	margin-left: 1em;
+	color: rgba(100, 0, 0, 0.4);
+}
+*/
+.display .entry .images {
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+}
+
+.display .image-outer {
+	display: inline-block;
+	width: $thumbnail_size;
+	height: $thumbnail_size;
+	overflow: hidden;
+	margin-right: .3em;
+}
+
+.display .image-inner {
+	display: inline-block;
+	height: $thumbnail_size*2;
+	position: relative;
+	top: -25%;
+	left: -25%;
+}
+
+@media (max-width: 1100px) { 
+	.display .images .image-outer:nth-child(3) {
+		display: none;
+	}
+}
+
+@media (max-width: 550px) { 
+	.display .images .image-outer:nth-child(2) {
+		display: none;
+	}
+}
+
+/*actually the image sizes need to change less than the other font sizes*/

@@ -1,0 +1,5 @@
+<div class="page tag-show">
+	<% @entries = @tag.entries %>
+	<%= render partial: 'entries/display' %>
+	<div class="tag-name"> <%= @tag.name %> </div>
+</div>

@@ -1,0 +1,53 @@
+<%= form_for(@entry) do |f| %>
+  <% if @entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+      <% @entry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field title">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field tag_list">
+    <%= f.label :tag_list %><br>
+    <%= f.text_field :tag_list %>
+  </div>
+
+<!--   <div class= "field tags">
+  <% @entry.tags.each do |tag| %>
+    <div class="tag">
+      <span class="name"> <%= tag.name %> </span>
+      <span class="delete"> 
+        <%= link_to 'Destroy', entry_tag_path(@entry, tag), method: :delete, data: { confirm: 'Are you sure?' } %> 
+      </span>
+    </div>
+  <% end %>
+  </div> -->
+
+  <div class="field intro">
+    <%= f.label :intro %><br>
+    <%= f.text_area :intro %>
+  </div>
+
+  <div class="field text">
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </div>
+
+  <div class="field image_list">
+    <%= f.label :image_list %><br>
+    <%= f.text_area :image_list %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

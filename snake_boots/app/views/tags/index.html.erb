@@ -1,0 +1,14 @@
+<div class="page manage row margin">
+  <div class="tags col">
+      <% @tags.each do |tag| %>
+        <div class= "tag">
+          <span class="tag-content name"> <strong> <%= tag.name %> </strong> </span>
+          <span class="tag-content actions">
+            <span class="tag-action"> <%= link_to 'Show', tag %> </span>
+            <span class="tag-action"> <%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %> 
+            </span>
+          </span>
+        </div>
+      <% end %>
+  </div>
+</div>

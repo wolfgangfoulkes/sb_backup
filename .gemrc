@@ -1,0 +1,12 @@
+--- 
+gem: --no-ri --no-rdoc
+"gemhome": '/home/snakeboo/ruby/gems'
+"gempath": ['/home/snakeboo/ruby/gems' , '/usr/local/ruby20/lib64/ruby/gems/']
+:benchmark: false
+:update_sources: true
+:verbose: false
+:backtrace: false
+:sources:
+- http://gems.rubyforge.org/
+- http://rubygems.org/
+:bulk_threshold: 1000

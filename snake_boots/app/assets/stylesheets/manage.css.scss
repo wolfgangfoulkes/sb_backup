@@ -1,0 +1,55 @@
+// Place all the styles related to the tags controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$min_font: 1.3em;
+$primary-color: rgba(100, 0, 0, 0.2);
+$secondary-color: rgba(0, 0, 0, 0.5);
+
+/*EDITING*/
+
+.page.manage.row {
+	min-height: 0;
+	width: 100vw;
+}
+
+.manage .entry-content, .manage .tag-content {
+	box-sizing: border-box;
+	padding: .5em;
+}
+
+.manage em {
+	color: rgba(100, 0, 0, 0.4);
+}
+
+/*ENTRIES*/
+
+.manage .entry {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+
+	box-sizing: border-box;
+	border: 1px solid rgba(100, 0, 0, 0.2);
+	margin: .5em;
+	padding: 1em;
+}
+
+/*TAGS*/
+
+.manage .tag {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+
+	box-sizing: border-box;
+	border: 1px solid rgba(100, 0, 0, 0.2);
+	margin: .5em;
+	padding: 1em;
+}

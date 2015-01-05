@@ -1,0 +1,39 @@
+// Place all the styles related to the tags controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*****TAG*****/
+
+/*.page.tag-show .tag-name {
+	position: fixed;
+	font-size: 8em;
+	bottom: -.4em;
+	right: 0;
+	z-index: -1;
+	color: rgba(100, 0, 0, 0.15);
+	white-space: nowrap;
+}
+
+.page.tag-show .tag-name:before {
+	content: "#";
+	font-size: 1.1em;
+	width: .3em;
+	display: inline-block;
+}*/
+
+.page.tag-show .tag-name {
+	position: fixed;
+	font-size: 10em;
+	top: -.5em;
+	right: -.2em;
+	z-index: -1;
+	color: rgba(100, 0, 0, 0.15);
+	white-space: nowrap;
+}
+
+.page.tag-show .tag-name:before {
+	content: "#";
+	font-size: .8em;
+	width: .3em;
+	display: inline-block;
+}

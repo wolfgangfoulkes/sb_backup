@@ -1,0 +1,47 @@
+<div class="about">
+      <p>
+         <% names = ['C++', 'Objective C', 'OpenGL', 'Ruby', 'Javascript'] %>
+         my name is <em class="em1"> Wolfgang Foulkes </em> <span class="stop"></span>
+<!--          I am a perpetual student <span class="stop"></span> -->
+         <br> 
+         I program in
+
+         <% names.each do |name| %>
+            <% @tag = Tag.where("lower(name) = ?", name.downcase).first %>
+            <em class="em2"> <%= link_to_if(@tag, name, @tag) %> </em>
+            <span class="stop"></span> 
+         <% end %>
+
+         I dig 
+
+         <% names = ['computer-vision', 'augmented reality', 'machine learning'] %>
+         <% names.each do |name| %>
+            <% @tag = Tag.where("lower(name) = ?", name.downcase).first %>
+            <em class="em2"> <%= link_to_if(@tag, name, @tag) %> </em>
+            <span class="stop"></span> 
+         <% end %>
+
+         sometimes I design sound for 
+
+         <% names = ['movies', 'music', 'performance'] %>
+         <% names.each do |name| %>
+            <% @tag = Tag.where("lower(name) = ?", "sound-design").first %>
+            <em class="em2"> <%= link_to_if(@tag, name, @tag) %> </em>
+            <span class="stop"></span> 
+         <% end %>
+
+         sometimes I <em class="em2"> write </em> short things
+         <span class="stop"></span> 
+         <br>
+         I built this site on <em class="em3">12/15/2014</em> 
+         to document various projects retrospectively and concurrently 
+<!--          I will post more fun stuff soon -->
+         <span class="stop"></span> 
+
+      </p>
+
+<!--       <svg class="svg-icon">
+         <use xlink:href="#arrows2"/>
+      </svg> -->
+      
+</div>

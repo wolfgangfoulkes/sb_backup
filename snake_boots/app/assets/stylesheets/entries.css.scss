@@ -1,0 +1,154 @@
+// Place all the styles related to the entries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$min_font: 1.6em;
+$primary-color: rgba(100, 0, 0, 0.2);
+$secondary-color: rgba(0, 0, 0, 0.5);
+
+$x_margin: 2vw;
+$image_size: 11em;
+
+
+/*SHOW ARTICLE*/
+
+.page.show {
+	max-height: 90vh;
+}
+
+.show .entry.row {
+	-webkit-justify-content: center;
+	justify-content: center;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 $x_margin;
+	padding-top: 2vh;
+	padding-bottom: 1vh;
+	font-size: $min_font;
+}
+
+.show .images.col {
+	margin-right: 1em;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+	overflow-y: scroll;
+/*	justify-content: space-between;*/
+	/*margin-bottom:2em; if you wanna cut off the partial*/
+}
+
+.show .image-outer {
+	display: inline-block;
+	width: $image_size;
+	height: $image_size;
+	overflow: hidden;
+	margin-bottom: .5em;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+}
+
+.show .image-outer:last-child {
+	margin-bottom: 0;
+}
+
+.show .image-inner {
+	position: relative;
+	top: -40%;
+	left: -40%;
+	display: inline-block;
+	width: $image_size * 2;
+}
+
+.show .entry-contents {
+	margin-left: 5vw;
+	margin-right: $x_margin + 2vw;
+	max-height: 100vh;
+	overflow-y: scroll;
+}
+
+.show .entry-content {
+	line-height: 1.4;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+}
+
+.show .entry-content.title {
+	display: none;
+}
+
+.show .entry-content.intro {
+	display: inline-block;
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	color: rgba(100, 0, 0, 0.8);
+	font-style: italic;
+	font-weight: 100;
+}
+
+.show .entry-content.intro:after {
+	display: inline-block;
+	content: " ";
+	border-bottom: 1px solid rgba(0, 0, 0, 1.0);
+}
+
+.show .entry-content.intro:before {
+	font-size: 1.2em;
+	font-style: normal;
+	content: ">>";
+	margin-right: 1em;
+	color: rgba(0, 0, 0, 1.0);
+}
+
+.show .entry-content.text {
+	font-size: 1em;
+	display: inline-block;
+	text-align: justify;
+	font-weight: 100;
+}
+
+.show .entry-content.text em {
+	color: rgba(100, 0, 0, 0.8);
+	font-style: normal;
+	font-weight: 100;
+	font-size: 1.1em;
+/*	word-spacing: 1.1;*/
+}
+
+.show .tags {
+	/*display: -webkit-flex;*/
+	/*display: flex;*/
+	display: none;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-self: flex-end;
+	align-self: flex-end;
+}
+
+.show .entry-content.tags .tag {
+	font-size: .8em;
+	padding: 0 .3em;
+	color: rgba(0, 0, 0, 0.4);
+	border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.show .entry-content.tags .tag:hover {
+	background-color: initial;
+	color: black;
+}
+
+@media (max-width: 900px) { 
+	.page.show {
+		font-size: .8em;
+	}
+}
+
+@media (max-width: 750px) { 
+	.page.show {
+		font-size: .7em;
+	}
+}
+
+@media (max-width: 650px) { 
+	.page.show {
+		font-size: .6em;
+	}
+}

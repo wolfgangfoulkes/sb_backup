@@ -1,0 +1,177 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$phone_w: 480px;
+$phone_h: 320px;
+$pad_w: 1024px;
+$pad_h: 768px;
+$laptop_w: 1440px;
+$laptop_h: 950px;
+
+$w0: 480px;
+$w1: 700px;
+$w2: 1024px;
+$w3: 1220px;
+
+$min_font: 1.3em;
+
+
+/*****WELCOME PAGE*****/
+
+.welcome .about {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100vh;
+}
+
+$about-width: 26em;
+$about-height: ($about-width / 3) * 2;
+.welcome .about p {
+	position: relative;
+	width: $about-width;
+	height: $about-height;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+	margin-top: -2em;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.5rem;
+	line-height: 2.1;
+	font-weight: 100;
+	text-align: justify;
+	color: rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+	padding: .3em .5em;
+	border: 1px solid rgba(100, 0, 0, 0.2);
+}
+
+.welcome .about a {
+	border-bottom: none;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.welcome .about a:hover {
+	background: none;
+	color: black;
+}
+
+.welcome .about em {
+	display: inline-block; /*prevent breaking*/
+	font-style: normal;
+	font-size: 1em;
+/*	color: rgba(0, 0, 0, 0.8);*/
+	word-spacing: .8;
+	line-height: .9;
+}
+
+.welcome .about .em1 {
+	color: rgba(120, 0, 0, 0.6);
+}
+
+.welcome .about .em2 {
+
+}
+
+.welcome .about .em2:nth-child(2n - 1) {
+}
+.welcome .about .em2:nth-child(3n - 1) {
+}
+
+/*** date ***/
+.welcome .about .em3 {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.welcome .about .stop {
+	display: inline-block;
+	height: 1em;
+	line-height: 1em;
+	position: relative;
+	bottom: .15em;
+
+/*	height: 0;
+	width: 0;
+	border: .2em solid rgba(100, 0, 0, 0.6);
+	margin: .25em;
+	transform: rotate(45deg);*/
+}
+
+.welcome .about .stop:before {
+	display: inline-block;
+	content: ">>";
+	color: rgba(120, 0, 0, 0.8);
+	font-weight: 500;
+	font-size: .8rem;
+	line-height: inherit;
+	margin: 0 0;
+}
+
+/***** CONTACT-PAGE *****/
+.contact {
+	display: -webkit-flex;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	position: relative;
+	z-index: 0;
+	font-weight: 100;
+}
+
+.contact .email-address {
+	font-size: 4em;
+	color: rgba(100, 0, 0, 0.4);
+}
+
+@media (max-width: $w2) {
+	.contact .email-address {
+		font-size: 3em;
+	}
+}
+
+@media (max-width: $w1) {
+	.contact .email-address {
+		font-size: 2em;
+	}
+}
+
+@media (max-width: $w0) {
+	.contact .email-address {
+		font-size: 1.5em;
+	}
+}
+
+.contact .apology {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	z-index: 1;
+
+	display: none;
+}
+
+.contact .apology em {
+	font-size: 1.2em;
+	font-weight: 100;
+}

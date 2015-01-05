@@ -1,0 +1,154 @@
+// Place all the styles related to the tags controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$min_font: 1.3em;
+$primary_color: rgba(100, 0, 0, 0.6);
+$secondary_color: rgba(0, 0, 0, 0.5);
+
+.page {
+	display: flex;
+	flex-direction: column;
+}
+
+.page.margin {
+	margin-top: 5em;
+}
+
+/***** NAV-BAR *****/
+
+.top-nav.row {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 5em;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 0 2vw;
+	z-index: 2;
+}
+
+/*** ICONS ***/
+
+.top-nav.row .icons.row {
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.top-nav.row .icon {
+	margin: 0 1em;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+}
+
+.top-nav.row .icon-link:hover {
+	background: none;
+}
+
+.top-nav.row .icon:hover .svg-icon
+{
+	fill: $primary_color;
+}
+
+.top-nav.row .icon {
+	position: relative;
+}
+
+.top-nav.row .icon .svg-icon {
+	width: 100%;
+	height: 100%;
+}
+
+
+.top-nav.row .icon.home .icon-link,
+.top-nav.row .icon.mail .icon-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.top-nav.row .icon.home, 
+.top-nav.row .icon.mail {
+	width: 2.5em;
+	height: 2.5em;
+}
+
+.top-nav.row .icon.menu {
+	width: 3em;
+	height: 3em;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+}
+
+/*forget this if you want to this is insanity*/
+.top-nav.row .icon.mail { 
+	position: relative;
+	top: .15em;
+}
+/*****/
+
+
+/*** DROP-MENU ***/
+
+.top-nav.row .icon.menu .main-menu {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	box-sizing: border-box;
+	background-color: $primary_color;
+}
+
+.top-nav.row .icon.menu:hover .main-menu.col {
+	-webkit-display: flex;
+	display: flex;
+}
+
+.top-nav.row .icon.menu .main-menu .menu-item {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	color: white;
+	font-size: 1.5em;
+	font-weight: 100;
+	white-space: nowrap;
+	padding: 0 .5em;
+	padding-top: .1em;
+}
+
+.top-nav.row .icon.menu .main-menu .menu-item:first-child {
+	padding-top: .3em;
+}
+
+.top-nav.row .icon.menu .main-menu .menu-item:last-child {
+	padding-bottom: .3em;
+	border-bottom: none;
+}
+
+.top-nav.row .icon.menu .main-menu .menu-item:hover {
+	background-color: black;
+}
+
+/*** SEARCH-BAR ***/
+
+.top-nav.row .search {
+	display: none;
+	font-size: 1.3em;
+	height: 1.4em;
+	width: 7.5em;
+	transition: width 1s ease;
+}
+
+.top-nav.row .search:hover, .top-nav.row .search:focus{
+	width: 20em;
+}
+
+.top-nav.row .search input {
+	height: 100%;
+	width: 100%;
+}

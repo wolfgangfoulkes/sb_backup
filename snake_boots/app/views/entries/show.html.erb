@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<div class="page show margin">
+	<div class="entry row">
+
+		<div class="images col"> 
+			<% @entry.images.each do |image| %>
+				<div class="image-outer">
+					<%= image_tag(image.url, class: "image-inner") %>
+				</div>
+			<% end %>
+		</div>
+
+		<div class="entry-contents col">
+			<div class="entry-content title"> <%= @entry.title %> </div>
+			<div class="entry-content tags"> 
+				<% @entry.tags.each do |tag| %>
+	                <%= link_to tag.name, tag, class: "tag" %>
+           		<% end %>
+        	</div>
+			<!-- <div class="entry-content title"> <%= @entry.title %> </div>  -->
+			<div class="entry-content intro"> <%= raw @entry.intro %> </div>
+			<div class="entry-content text"> <%= raw @entry.text %> </div>
+		</div>
+	
+	<!-- might have to do .text.html_safe sometimes -->
+	</div>
+</div>

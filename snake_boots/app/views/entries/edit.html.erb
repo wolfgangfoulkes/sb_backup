@@ -1,0 +1,27 @@
+<div class="page manage row margin">
+	<div class="col">
+		<div class="entry-content title"> <em> title: </em> <%= @entry.title %> </div>
+		<div class="entry-content image_list"> <em> images: </em><%= @entry.image_list %> </div>
+		<div class="entry-content intro"> <em> intro: </em> <%= raw @entry.intro %> </div>
+		<div class="entry-content text"> <em> text: </em> <%= raw @entry.text %> </div>
+		<!-- might have to do .text.html_safe sometimes -->
+		<div class="entry-content tag_list"> <em> tags: </em> 
+			<% @entry.tags.each do |tag| %>
+              <span class="delete-tag">
+                <%= link_to tag.name, entry_tag_path(@entry, tag), method: :delete, data: { confirm: 'delete tag?' } %>
+              </span>
+            <% end %>
+		</div>
+
+
+		<%= render 'form' %>
+
+		<div class="actions">
+			<%= link_to 'Show', @entry %> |
+			<%= link_to 'Back', entries_path %>
+		</div>
+	</div>
+
+</div>
+
+

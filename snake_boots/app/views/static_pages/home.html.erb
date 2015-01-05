@@ -1,0 +1,5 @@
+<div class="page welcome">
+	<%= render partial: 'about' %>
+	<% @entries = Entry.all %>
+	<%= render partial: 'entries/display' %>
+</div>

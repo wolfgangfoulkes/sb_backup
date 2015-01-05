@@ -1,0 +1,29 @@
+<div class="page manage row margin">
+  <div class="entries col">
+      <% @entries.each do |entry| %>
+        <div class= "entry">
+          <div class="entry-content title"> <em> title: </em> <%= entry.title %> </div>
+          <div class="entry-content intro"> <em> intro: </em> <%= entry.intro %> </div>
+          <div class="entry-content entry-tags"> <em> tags: </em> <%= entry.tag_list %> </div>
+          <div class="entry-content actions">
+            <span class="entry-action"> <%= link_to 'Show', entry %> </span>
+            <span class="entry-action"> <%= link_to 'Edit', edit_entry_path(entry) %> </span>
+            <span class="entry-action"> <%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %> </span>
+          </div>
+        </div>
+      <% end %>
+      <div class="entry">
+        <%= link_to 'New Entry', new_entry_path %>
+      </div>
+  </div>
+
+<!--   <div class="tags col">
+        <% Tag.all.each do |tag| %>
+          <span class="tag">
+                <%= link_to tag.name, tag_path(tag), method: :delete, data: { confirm: 'delete tag?' } %>
+          </span>
+        <% end %>
+  </div> -->
+
+  
+</div>

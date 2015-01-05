@@ -1,0 +1,8 @@
+PassengerEnabled On
+PassengerLoadShellEnvVars On
+PassengerAppRoot /home/snakeboo/snake_boots
+PassengerRuby /usr/local/ruby20/bin/ruby
+RackEnv development
+
+#PassengerRuby /usr/local/ruby20/bin/ruby
+#PassengerLoadShellEnvVars On

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SnakeBoots</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= render 'shared/icons' %>
+	<div class="top-nav row">
+		<div class="icons row">
+			<div class="icon menu">
+				<svg class="svg-icon">
+	        		<use xlink:href="#menu_ai"/>
+	    		</svg>
+
+				<div class="main-menu col">
+<!-- 					<%= link_to("contact", static_pages_contact_path, class: "menu-item") %> -->
+					<% Tag.all.each do |tag| %>
+						<%= link_to(tag.name, tag, class: "menu-item") %> 
+					<% end %>
+				</div>
+			</div>
+			<div class="icon home">
+				<svg class="svg-icon">
+		        	<use xlink:href="#home3"/>
+		    	</svg>
+		    	<%= link_to("", root_path, class: "icon-link") %>
+		    </div>
+		    <div class="icon mail">
+			    <svg class="svg-icon">
+			        <use xlink:href="#mail_fi"/>
+			    </svg>
+			    <%= link_to("", static_pages_contact_path, class: "icon-link") %>
+			</div>
+		</div>
+		<input class="search" type="search" placeholder="search"/> 
+	</div>
+
+<%= yield %>
+
+</body>
+</html>

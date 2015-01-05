@@ -1,0 +1,147 @@
+I, [2015-01-04T02:40:54.731019 #7394]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-04 02:40:54 -0600
+I, [2015-01-04T02:40:54.755735 #7394]  INFO -- : Processing by StaticPagesController#home as HTML
+E, [2015-01-04T02:40:54.815034 #7394] ERROR -- : SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1
+I, [2015-01-04T02:40:54.816111 #7394]  INFO -- :   Rendered static_pages/_about.html.erb (4.0ms)
+I, [2015-01-04T02:40:54.816281 #7394]  INFO -- :   Rendered static_pages/home.html.erb within layouts/application (36.0ms)
+I, [2015-01-04T02:40:54.816503 #7394]  INFO -- : Completed 500 Internal Server Error in 61ms
+F, [2015-01-04T02:40:54.819078 #7394] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1):
+     7:          I program in
+     8: 
+     9:          <% names.each do |name| %>
+    10:             <% @tag = Tag.where("lower(name) = ?", name.downcase).first %>
+    11:             <em class="em2"> <%= link_to_if(@tag, name, @tag) %> </em>
+    12:             <span class="stop"></span> 
+    13:          <% end %>
+  app/views/static_pages/_about.html.erb:10:in `block in _app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/_about.html.erb:9:in `each'
+  app/views/static_pages/_about.html.erb:9:in `_app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb___3934149952625547509_70263711188960'
+
+
+I, [2015-01-04T02:40:58.107677 #7394]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-04 02:40:58 -0600
+I, [2015-01-04T02:40:58.108870 #7394]  INFO -- : Processing by StaticPagesController#home as HTML
+E, [2015-01-04T02:40:58.111367 #7394] ERROR -- : SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1
+I, [2015-01-04T02:40:58.112350 #7394]  INFO -- :   Rendered static_pages/_about.html.erb (2.0ms)
+I, [2015-01-04T02:40:58.112504 #7394]  INFO -- :   Rendered static_pages/home.html.erb within layouts/application (2.3ms)
+I, [2015-01-04T02:40:58.112656 #7394]  INFO -- : Completed 500 Internal Server Error in 4ms
+F, [2015-01-04T02:40:58.116040 #7394] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1):
+     7:          I program in
+     8: 
+     9:          <% names.each do |name| %>
+    10:             <% @tag = Tag.where("lower(name) = ?", name.downcase).first %>
+    11:             <em class="em2"> <%= link_to_if(@tag, name, @tag) %> </em>
+    12:             <span class="stop"></span> 
+    13:          <% end %>
+  app/views/static_pages/_about.html.erb:10:in `block in _app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/_about.html.erb:9:in `each'
+  app/views/static_pages/_about.html.erb:9:in `_app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb___3934149952625547509_70263711188960'
+
+
+I, [2015-01-04T02:40:59.984859 #7394]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-04 02:40:59 -0600
+I, [2015-01-04T02:40:59.985848 #7394]  INFO -- : Processing by StaticPagesController#home as HTML
+E, [2015-01-04T02:40:59.987862 #7394] ERROR -- : SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1
+I, [2015-01-04T02:40:59.988713 #7394]  INFO -- :   Rendered static_pages/_about.html.erb (1.8ms)
+I, [2015-01-04T02:40:59.988856 #7394]  INFO -- :   Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+I, [2015-01-04T02:40:59.988988 #7394]  INFO -- : Completed 500 Internal Server Error in 3ms
+F, [2015-01-04T02:40:59.991938 #7394] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1):
+     7:          I program in
+     8: 
+     9:          <% names.each do |name| %>
+    10:             <% @tag = Tag.where("lower(name) = ?", name.downcase).first %>
+    11:             <em class="em2"> <%= link_to_if(@tag, name, @tag) %> </em>
+    12:             <span class="stop"></span> 
+    13:          <% end %>
+  app/views/static_pages/_about.html.erb:10:in `block in _app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/_about.html.erb:9:in `each'
+  app/views/static_pages/_about.html.erb:9:in `_app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb___3934149952625547509_70263711188960'
+
+
+I, [2015-01-04T02:41:04.660807 #7394]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-04 02:41:04 -0600
+I, [2015-01-04T02:41:04.661801 #7394]  INFO -- : Processing by StaticPagesController#home as HTML
+E, [2015-01-04T02:41:04.663463 #7394] ERROR -- : SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1
+I, [2015-01-04T02:41:04.664021 #7394]  INFO -- :   Rendered static_pages/_about.html.erb (1.2ms)
+I, [2015-01-04T02:41:04.664101 #7394]  INFO -- :   Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+I, [2015-01-04T02:41:04.664189 #7394]  INFO -- : Completed 500 Internal Server Error in 2ms
+F, [2015-01-04T02:41:04.666124 #7394] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1):
+     7:          I program in
+     8: 
+     9:          <% names.each do |name| %>
+    10:             <% @tag = Tag.where("lower(name) = ?", name.downcase).first %>
+    11:             <em class="em2"> <%= link_to_if(@tag, name, @tag) %> </em>
+    12:             <span class="stop"></span> 
+    13:          <% end %>
+  app/views/static_pages/_about.html.erb:10:in `block in _app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/_about.html.erb:9:in `each'
+  app/views/static_pages/_about.html.erb:9:in `_app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb___3934149952625547509_70263711188960'
+
+
+I, [2015-01-04T02:41:07.667904 #7394]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-04 02:41:07 -0600
+I, [2015-01-04T02:41:07.668935 #7394]  INFO -- : Processing by StaticPagesController#home as HTML
+E, [2015-01-04T02:41:07.670345 #7394] ERROR -- : SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1
+I, [2015-01-04T02:41:07.670898 #7394]  INFO -- :   Rendered static_pages/_about.html.erb (1.2ms)
+I, [2015-01-04T02:41:07.671022 #7394]  INFO -- :   Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+I, [2015-01-04T02:41:07.671167 #7394]  INFO -- : Completed 500 Internal Server Error in 2ms
+F, [2015-01-04T02:41:07.673802 #7394] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1):
+     7:          I program in
+     8: 
+     9:          <% names.each do |name| %>
+    10:             <% @tag = Tag.where("lower(name) = ?", name.downcase).first %>
+    11:             <em class="em2"> <%= link_to_if(@tag, name, @tag) %> </em>
+    12:             <span class="stop"></span> 
+    13:          <% end %>
+  app/views/static_pages/_about.html.erb:10:in `block in _app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/_about.html.erb:9:in `each'
+  app/views/static_pages/_about.html.erb:9:in `_app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb___3934149952625547509_70263711188960'
+
+
+I, [2015-01-04T02:41:17.701486 #7394]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-04 02:41:17 -0600
+I, [2015-01-04T02:41:17.702442 #7394]  INFO -- : Processing by StaticPagesController#home as HTML
+E, [2015-01-04T02:41:17.703897 #7394] ERROR -- : SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1
+I, [2015-01-04T02:41:17.704553 #7394]  INFO -- :   Rendered static_pages/_about.html.erb (1.3ms)
+I, [2015-01-04T02:41:17.704691 #7394]  INFO -- :   Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+I, [2015-01-04T02:41:17.704827 #7394]  INFO -- : Completed 500 Internal Server Error in 2ms
+F, [2015-01-04T02:41:17.707771 #7394] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1):
+     7:          I program in
+     8: 
+     9:          <% names.each do |name| %>
+    10:             <% @tag = Tag.where("lower(name) = ?", name.downcase).first %>
+    11:             <em class="em2"> <%= link_to_if(@tag, name, @tag) %> </em>
+    12:             <span class="stop"></span> 
+    13:          <% end %>
+  app/views/static_pages/_about.html.erb:10:in `block in _app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/_about.html.erb:9:in `each'
+  app/views/static_pages/_about.html.erb:9:in `_app_views_static_pages__about_html_erb__2612640334330182184_70263669786640'
+  app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb___3934149952625547509_70263711188960'
+
+
+I, [2015-01-04T02:46:20.176663 #29360]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-04 02:46:20 -0600
+I, [2015-01-04T02:46:20.186897 #29360]  INFO -- : Processing by StaticPagesController#home as HTML
+E, [2015-01-04T02:46:20.215034 #29360] ERROR -- : SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1
+I, [2015-01-04T02:46:20.215640 #29360]  INFO -- :   Rendered static_pages/_about.html.erb (3.3ms)
+I, [2015-01-04T02:46:20.215721 #29360]  INFO -- :   Rendered static_pages/home.html.erb within layouts/application (4.5ms)
+I, [2015-01-04T02:46:20.215838 #29360]  INFO -- : Completed 500 Internal Server Error in 29ms
+F, [2015-01-04T02:46:20.217624 #29360] FATAL -- : 
+ActionView::Template::Error (SQLite3::SQLException: no such table: tags: SELECT  "tags".* FROM "tags"  WHERE (lower(name) = 'c++')  ORDER BY "tags"."id" ASC LIMIT 1):
+     7:          I program in
+     8: 
+     9:          <% names.each do |name| %>
+    10:             <% @tag = Tag.where("lower(name) = ?", name.downcase).first %>
+    11:             <em class="em2"> <%= link_to_if(@tag, name, @tag) %> </em>
+    12:             <span class="stop"></span> 
+    13:          <% end %>
+  app/views/static_pages/_about.html.erb:10:in `block in _app_views_static_pages__about_html_erb__1218000666186988381_70116210696080'
+  app/views/static_pages/_about.html.erb:9:in `each'
+  app/views/static_pages/_about.html.erb:9:in `_app_views_static_pages__about_html_erb__1218000666186988381_70116210696080'
+  app/views/static_pages/home.html.erb:2:in `_app_views_static_pages_home_html_erb__2433097669733025450_70116210641880'
+
+

@@ -1,0 +1,24 @@
+<div class="entries display">
+	<% @entries.each do |entry| %>
+		<div class="entry row">
+			<%= link_to("", entry, class:"entry-link"); %>
+			<div class="entry-contents col">
+				<div class="entry-content title"> <%= entry.title %> </div>
+				<div class="entry-content intro"> <%= entry.intro %> </div>
+			</div>
+			<div class="tags"> 
+				<% entry.tags.each do |tag| %>
+            		<%= link_to tag.name, tag, class: "tag" %>
+   				<% end %> 
+   			</div>
+			<div class="images">
+				<% entry.images.first(3).each do |image| %>
+
+					<div class="image-outer">
+						<%= image_tag(image.url, class: "image-inner") %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	<% end %>
+</div>
